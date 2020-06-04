@@ -85,10 +85,10 @@ def update_check():
         ("https://raw.githubusercontent.com/Doomlad/LeagueOfLocalesVALORANT/master/version.txt")
     read_update = update_program.read().decode('utf-8')
 
-    if read_update > __version__:
+    if float(read_update) > float(__version__):
         print("[!] Update available: " + read_update, end="")
         print("[*] Visit https://github.com/Doomlad/LeagueOfLocalesVALORANT to download.")
-    elif read_update == __version__:
+    elif float(read_update) == float(__version__):
         print("[*] Currently running the latest version: " + __version__)
     else:
         print("[*] Strange version detected. Latest GitHub release: " + str(read_update))
