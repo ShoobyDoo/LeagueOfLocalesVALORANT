@@ -1,11 +1,11 @@
 # League Of Locales: VALORANT
 > Change the audio for VALORANT while keeping english text!
 
-#### Discussion
+### Discussion
 >Consider joining the [Discord Server](https://discord.gg/fzRK2Sb) for quick access to the community and for general discussion about 
 upcoming features. Report bugs and more as well. Enjoy~!
 
-#### Supported Locales
+### Supported Locales
 * English
 * Dutch
 * Spanish
@@ -23,14 +23,14 @@ upcoming features. Report bugs and more as well. Enjoy~!
  
  > *Please extract the files (.zip) before trying to launch!*
 
-#### Prerequisites
+### Prerequisites
 * [Python 3+](https://www.python.org/downloads/)
 * [psutil 5.7.0+](https://pypi.org/project/psutil/) (Handled automatically by program)
 * Add the '--disable-auto-launch' argument to the VALORANT shortcut seen [here](https://cdn.discordapp.com/attachments/584258352859709450/718136425735782440/9bfa32fae4ecce33e72078dadfa681b9.png)
 * Have the VALORANT shortcut present on your desktop
 * Must already have ENGLISH as your clients starting locale
 
-#### Installation
+### Installation
 
 Start by downloading and installing Python from the link above. You will want to tick the "Add python to path" 
 option when installing. 
@@ -44,7 +44,7 @@ extracted the source.
 
 Then, simply type py leagueoflocalesVALORANT.py and press enter. This should start the program.
 
-#### Screenshots with explanations
+### Screenshots with explanations
 
 At this point, you should be up to here
 
@@ -98,7 +98,7 @@ exit.
 Once the program closes, you can then simply just launch VALORANT and as you can see above, all UI Text elements are in
 english, and audio is in Korean.
 
-#### End!
+### End!
 
 >*Thank you for reading through all that, hope you enjoy my program!*
 >
