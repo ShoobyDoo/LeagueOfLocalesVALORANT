@@ -7,6 +7,7 @@
 from setuptools.command.easy_install import main as install
 import os
 import time
+import urllib.request
 from shutil import copyfile
 
 try:
@@ -74,10 +75,23 @@ potential_drives = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 
 
 def update_check():
+
     version = open("version.txt", "r")
     __version__ = version.read()
     version.close()
-    print("[*] Currently running version: " + __version__)
+
+    print("[*] Checking for updates...")
+    update_program = urllib.request.urlopen\
+        ("https://raw.githubusercontent.com/Doomlad/LeagueOfLocalesVALORANT/master/version.txt")
+    read_update = update_program.read().decode('utf-8')
+
+    if read_update > __version__:
+        print("[!] Update available: " + read_update, end="")
+        print("[*] Visit https://github.com/Doomlad/LeagueOfLocalesVALORANT to download.")
+    elif read_update == __version__:
+        print("[*] Currently running the latest version: " + __version__)
+    else:
+        print("[*] Strange version detected. Latest GitHub release: " + str(read_update))
 
 
 def banner():
