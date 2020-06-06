@@ -86,7 +86,7 @@ def update_check():
     read_update = update_program.read().decode('utf-8')
 
     if float(read_update) > float(__version__):
-        print("[!] Update available: " + read_update, end="")
+        print("[!] Update available: " + read_update)
         print("[*] Visit https://github.com/Doomlad/LeagueOfLocalesVALORANT to download.")
     elif float(read_update) == float(__version__):
         print("[*] Currently running the latest version: " + __version__)
