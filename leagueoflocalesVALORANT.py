@@ -292,7 +292,8 @@ def main():
                     print("[!] Deleting " + file + ".")
                     # locales_base_text = path + "\\" + file
                     os.chdir(path)
-                    os.system("rm " + file)
+                    # os.system("rm " + file)
+                    os.remove(file)
                     print("[*] File Deleted.")
 
             text_folder = os.path.expanduser("~\\Desktop") + "\\en_US_TextFiles\\"
