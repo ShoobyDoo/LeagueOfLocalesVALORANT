@@ -4,7 +4,6 @@
 # Last edit: 06/02/2020
 # Created by Doomlad
 
-from setuptools.command.easy_install import main as install
 import os
 import time
 import urllib.request
@@ -46,7 +45,11 @@ def prerequisites():
 
             if user_input == 'y':
                 print("Installing " + package + " via pip...", end="")
-                install([package])
+                try:
+                    os.system("pip install psutil")
+                except Exception as e:
+                    print("Something went wrong: {}".format(e))
+                    
                 print("Done!\nPlease restart the program.")
                 counter = 4
                 for count in range(3):
@@ -75,10 +78,13 @@ potential_drives = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 
 
 def update_check():
-
-    version = open("version.txt", "r")
-    __version__ = version.read()
-    version.close()
+    try:
+        version = open("version.txt", "r")
+        __version__ = version.read()
+        version.close()
+    except Exception:
+        __version__ = "1.1"
+        print("[!] Error reading version from file... FALLING BACK TO LOCAL {}".format(__version__))
 
     print("[*] Checking for updates...")
     update_program = urllib.request.urlopen\
@@ -330,4 +336,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as e:
+        input("Something went wrong. See: {}".format(e))
