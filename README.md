@@ -1,3 +1,6 @@
+# League of Locales: VALORANT has been PATCHED by Riot Games! Thank you for everyone who used and enjoyed it, and thank you to all my testers for your time. Unlucky, gg.
+# THIS SOFTWARE HAS BEEN PATCHED AND WILL BE ARCHIVED!!!
+---
 # League Of Locales: VALORANT
 > Change the audio for VALORANT while keeping english text!
 
